@@ -1,10 +1,26 @@
 const express = require('express');
+const request = require('supertest');
+const assert = require('node:assert');
+require('dotenv').config();
+
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('TJENANNAER');
+  res.json({ message: 'Hello, World!' });
 });
 
-app.listen(8000, () => {
-  console.log('LISTENING ON 8000');
+// TJABA aaaaawdawdawdw
+//
+// request('/')
+//   .get('/')
+//   .expect(200)
+//   // .expect((res) => {
+//     // assert(res.body.hasOwnProperty('message'));
+//   // })
+//   .end(function(err, res) {
+//     if (err) throw err;
+//   });
+
+app.listen(process.env.PORT, () => {
+  console.log('LISTENING ON PORT 8000');
 });
