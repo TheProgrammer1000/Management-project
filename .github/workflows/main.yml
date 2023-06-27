@@ -17,5 +17,4 @@ jobs:
         with:
           node-version: 15.x
       - run: npm install
-      - run: npx nx test surveybear-api
-      - run: npx nx test surveybear-survey-spa
+      - run: npm test
